@@ -1,4 +1,5 @@
-require('config.globals')
 require('config.lazy')
 require('config.options')
 require('config.keymaps')
+require('config.telescope')
+require('config.telescope-file-browser') 
