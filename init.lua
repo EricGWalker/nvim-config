@@ -1,2 +1,1 @@
-require("eric")
-require("eric.remap")
+require('config')
