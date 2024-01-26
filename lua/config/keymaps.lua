@@ -5,7 +5,8 @@ local opts = { noremap = true, silent = true }
 --
 --
 --Remaps Stollen from @ThePrimeAgen A.K.A @TheVimAgen
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+--vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+--Replaced with telescope file browser
 vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")
 end)
@@ -17,7 +18,7 @@ end)
 --vim.keymap.set("n", "<leader>Y", [["+Y]])
 
 -- Pure Fucking Genius
-vim.keymap.set("i", "<C-c>", "<Esc>")
+vim.keymap.set("i", "<C-c>", "<Esc>", opts)
 
 
 -- Pane Navigation
