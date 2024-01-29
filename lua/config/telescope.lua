@@ -17,12 +17,12 @@ local builtin = require('telescope.builtin')
 -- Recommended Keymaps from telescope GitHub
 
 --Keymap
-vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
-vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
-vim.keymap.set('n', '<leader>fu', builtin.buffers, {})
-vim.keymap.set('n', '<leader>fa', builtin.builtin ) 
-vim.keymap.set('n', '<leader>fk', builtin.keymaps, {}) 
-vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
+vim.keymap.set('n', '<leader>ff', builtin.find_files)
+vim.keymap.set('n', '<leader>fg', builtin.live_grep)
+vim.keymap.set('n', '<leader>fu', builtin.buffers)
+vim.keymap.set('n', '<leader>fa', builtin.builtin) 
+vim.keymap.set('n', '<leader>fk', builtin.keymaps) 
+vim.keymap.set('n', '<leader>fh', builtin.help_tags)
 vim.keymap.set('n', '<leader>pv', function() telescope.extensions.file_browser.file_browser({initial_mode = 'normal', path='%:p:h'}) end) -- file browser
 
 -- vim.keymap.set('n', '<leader>fd', fb_extension.folder_browser, {}) -- folder directory

@@ -1,9 +1,10 @@
 {
   "Comment.nvim": { "branch": "master", "commit": "0236521ea582747b58869cb72f70ccfa967d2e89" },
+  "harpoon": { "branch": "master", "commit": "ccae1b9bec717ae284906b0bf83d720e59d12b91" },
   "lazy.nvim": { "branch": "main", "commit": "aedcd79811d491b60d0a6577a9c1701063c2a609" },
   "neoconf.nvim": { "branch": "main", "commit": "bf04719b3b25ba5f6a059c0a10ee67e5996bdc4c" },
-  "neodev.nvim": { "branch": "main", "commit": "3408a4daeca5ff8f41cb2c668b6d8fcc665f793a" },
-  "nightfox.nvim": { "branch": "main", "commit": "7e9487875dc5f69a2fd6f60d3a3ef4fb457b57c1" },
+  "neodev.nvim": { "branch": "main", "commit": "a69b4c417b7e5bdeee3d181b8ff8dbc5de66fc01" },
+  "nightfox.nvim": { "branch": "main", "commit": "57b8154aba0de8ced36722ea2674a7b97e4f468f" },
   "plenary.nvim": { "branch": "master", "commit": "663246936325062427597964d81d30eaa42ab1e4" },
   "telescope-file-browser.nvim": { "branch": "master", "commit": "6dd6522bc1a4cbe5883eb0272f5cc7a54ae3858b" },
   "telescope.nvim": { "branch": "0.1.x", "commit": "d90956833d7c27e73c621a61f20b29fdb7122709" },
