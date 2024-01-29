@@ -1,6 +1,5 @@
-return {
 	local keymap = vim.keymap
-local opts = { noremap = true, silent = true }
+    local opts = { noremap = true, silent = true }
 
 --Directory Navigation
 --
@@ -36,4 +35,4 @@ keymap.set("n", "<leader>sh", vim.cmd.split, opts) -- Split Horizontally
 
 
 
-}
+

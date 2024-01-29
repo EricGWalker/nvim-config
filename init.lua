@@ -17,17 +17,12 @@ vim.opt.rtp:prepend(lazypath)
 vim.g.mapleader = " " -- Make sure to set `mapleader` before lazy so your mappings are correct
 vim.g.maplocalleader = " "
 
-
-require('config.options')
 local plugins = 'plugins'
 
 -- Lazy Config 
 local opts = {
 	defaults = {
 		lazy = true,
-	},
-	install = {
-		colorscheme = {'carbonfox'}
 	},
 	rtp = {
 		disabled_plugins = {
@@ -48,4 +43,6 @@ local opts = {
 
 
 
-require('lazy').setup('plugins', opts)
+require('lazy').setup(plugins , opts)
+
+require('config')

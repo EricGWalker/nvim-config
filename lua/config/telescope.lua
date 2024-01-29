@@ -23,7 +23,7 @@ vim.keymap.set('n', '<leader>fu', builtin.buffers, {})
 vim.keymap.set('n', '<leader>fa', builtin.builtin ) 
 vim.keymap.set('n', '<leader>fk', builtin.keymaps, {}) 
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
-vim.keymap.set('n', '<leader>pv', function() telescope.extensions.file_browser.file_browser({initial_mode = 'normal'}) end) -- file browser
+vim.keymap.set('n', '<leader>pv', function() telescope.extensions.file_browser.file_browser({initial_mode = 'normal', path='%:p:h'}) end) -- file browser
 
 -- vim.keymap.set('n', '<leader>fd', fb_extension.folder_browser, {}) -- folder directory
 -- above is broken... I will learn one day how to get it to work
@@ -33,7 +33,6 @@ vim.keymap.set('n', '<leader>pv', function() telescope.extensions.file_browser.f
 -- These variables aren't being used yet, but they may one day...
 local fb_actions = require "telescope".extensions.file_browser.actions
 local fb_picker = require "telescope".extensions.file_browser.picker
-
 
 telescope.setup {
     defaults = {
@@ -77,7 +76,7 @@ telescope.setup {
                 },
             },
 
-           initial_mode = 'normal'
+            initial_mode = 'normal'
         },
     },
 }
