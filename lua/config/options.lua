@@ -14,7 +14,8 @@ vim.opt.wrap = false
 vim.opt.incsearch = true
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
-vim.opt.hlsearch = false
+vim.opt.hlsearch = true
+vim.keymap.set('n' , '<leader>/',function() vim.cmd(':noh') end )
 
 -- Appearance
 vim.opt.relativenumber = true

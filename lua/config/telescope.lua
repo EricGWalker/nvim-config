@@ -37,6 +37,7 @@ local fb_picker = require "telescope".extensions.file_browser.picker
 telescope.setup {
     defaults = {
         initial_mode = 'insert',
+        layout_strategy = "flex",
         mappings = {
             i = {
                 ["<C-j>"] = "move_selection_next",
