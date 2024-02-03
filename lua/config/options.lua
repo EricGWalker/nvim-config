@@ -43,3 +43,6 @@ vim.opt.mouse:append('a')
 vim.opt.clipboard:append("unnamedplus")
 vim.opt.modifiable = true
 vim.opt.encoding = "UTF-8"
+
+--Shell
+vim.o.shell = '/usr/bin/fish'

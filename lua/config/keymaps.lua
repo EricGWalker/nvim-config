@@ -31,8 +31,16 @@ keymap.set("n", "<C-l>", "<C-w>l", opts) -- Navigate Right
 --Window Managment
 keymap.set("n", "<leader>sv", vim.cmd.vsplit, opts) -- Split Vertically
 keymap.set("n", "<leader>sh", vim.cmd.split, opts) -- Split Horizontally
+keymap.set("n", "<leader>st", vim.cmd.terminal, opts) --Inserts terminal in current window
+
+--Terminal Navigation
+    --This is probably a dangerous line
+--keymap.set('t', "<C-c>", [[<C-\><C-n>]], {silent = true, noremap = true})
 
 
 
-
-
+keymap.set('t', "<C-h>", [[<C-\><C-n><C-w>h]], {silent = true, noremap = true})
+keymap.set('t', "<C-j>", [[<C-\><C-n><C-w>j]], {silent = true, noremap = true})
+keymap.set('t', "<C-k>", [[<C-\><C-n><C-w>k]], {silent = true, noremap = true})
+    -- I actively see myself using Control L to clear the terminal more often than changing from the terminal to a screen on the right hand side
+-- keymap.set('t', "<C-l>", [[<C-\><C-n><C-w>l]], {silent = true, noremap = true})

@@ -22,4 +22,11 @@ vim.keymap.set('n', '<leader>nts', function()
 end
 );
 
+-- Broken commands only here as a reference
+
+-- vim.keymap.set('n', '/', vim.cmd([[Neotree toggle current reveal_force_cwd<cr>]]))
+-- vim.keymap.set('n', '|', vim.cmd([[Neotree reveal<cr>]]))
+-- vim.keymap.set('n', 'gd', vim.cmd([[Neotree float reveal_file=<cfile> reveal_force_cwd<cr>]]))
+-- vim.keymap.set('n', '<leader>b', vim.cmd([[Neotree toggle show buffers right<cr>]]))
+-- vim.keymap.set('n', '<leader>s', vim.cmd([[Neotree float git_status<cr>]]))
 --{description: "Open neo-tree at current file or working directory"}
