@@ -10,12 +10,3 @@ vim.g.firenvim_config = {
         }
     }
 }
-
-if vim.g.started_by_firenvim == true then
-    vim.o.laststatus = 0
-    vim.cmd('startinsert')
-
-else
-  vim.o.laststatus = 2
-
-end
