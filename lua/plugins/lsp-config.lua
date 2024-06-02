@@ -15,7 +15,9 @@ return {
     },
     {
         'neovim/nvim-lspconfig',
-        lazy = false,
+         event = { "BufReadPost", "BufNewFile" },
+         cmd = { "LspInfo", "LspInstall", "LspUninstall" },
+        lazy = true,
         config = function()
             local lspconfig = require('lspconfig')
             lspconfig.lua_ls.setup({})

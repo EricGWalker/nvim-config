@@ -45,4 +45,4 @@ vim.opt.modifiable = true
 vim.opt.encoding = "UTF-8"
 
 --Shell
-vim.o.shell = '/usr/bin/fish'
+vim.o.shell = '/usr/bin/zsh'
