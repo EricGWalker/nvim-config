@@ -1,7 +1,7 @@
 local conf = function()
     local config = require('nvim-treesitter.configs')
     config.setup({
-        ensure_installed = {"c", "lua", "vim", "vimdoc", "html"},
+        ensure_installed = {'lua'},
         highlight = {enable = true},
         indent = {enable = true},
     })

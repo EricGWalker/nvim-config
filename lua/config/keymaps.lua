@@ -35,7 +35,7 @@ keymap.set("n", "<leader>st", vim.cmd.terminal, opts) --Inserts terminal in curr
 
 --Terminal Navigation
     --This is probably a dangerous line
---keymap.set('t', "<C-c>", [[<C-\><C-n>]], {silenpt = true, noremap = true})
+--keymap.set('t', "<C-c>", [[<C-\><C-n>]], {silent = true, noremap = true})
 
 
 
@@ -44,7 +44,3 @@ keymap.set('t', "<C-j>", [[<C-\><C-n><C-w>j]], {silent = true, noremap = true})
 keymap.set('t', "<C-k>", [[<C-\><C-n><C-w>k]], {silent = true, noremap = true})
     -- I actively see myself using Control L to clear the terminal more often than changing from the terminal to a screen on the right hand side
 -- keymap.set('t', "<C-l>", [[<C-\><C-n><C-w>l]], {silent = true, noremap = true})
-    --
-vim.keymap.set("n", "<leader>ya", function()
-    vim.cmd("%y+")
-end)

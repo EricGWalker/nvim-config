@@ -9,7 +9,6 @@ vim.opt.softtabstop = 4
 vim.opt.expandtab = true
 vim.opt.smartindent = true
 vim.opt.wrap = true
-vim.opt.linebreak = true
 
 -- Search
 vim.opt.incsearch = true
@@ -45,4 +44,4 @@ vim.opt.modifiable = true
 vim.opt.encoding = "UTF-8"
 
 --Shell
-vim.o.shell = '/usr/bin/zsh'
+vim.o.shell = '/usr/bin/fish'
