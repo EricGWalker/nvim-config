@@ -27,6 +27,7 @@ return {
             lspconfig.clangd.setup({})
             lspconfig.bashls.setup({})
             lspconfig.powershell_es.setup({})
+            lspconfig.emmet_language_server.setup({})
         end
     }
 }
