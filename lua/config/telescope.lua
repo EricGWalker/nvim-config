@@ -48,7 +48,8 @@ telescope.setup {
 
             n = {
                 ["<C-c>"] = "close",
-                ["o"] = false, -- disables the open hotkey (This config is set for WSL, where I do not want linux trying to open applications)
+                ["q"] = "close",
+                --["o"] = false, -- disables the open hotkey (This config is set for WSL, where I do not want linux trying to open applications)
             },
         },
 

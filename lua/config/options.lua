@@ -20,8 +20,8 @@ vim.opt.hlsearch = false
 vim.opt.relativenumber = true
 vim.opt.number = true
 vim.opt.termguicolors = true
-vim.opt.colorcolumn = '100'
-vim.opt.signcolumn = "yes"
+-- vim.opt.colorcolumn = '100'
+vim.opt.signcolumn = "yes:1"
 vim.opt.cmdheight = 1
 vim.opt.scrolloff = 10
 vim.opt.completeopt = "menuone,noinsert,noselect"
@@ -44,4 +44,4 @@ vim.opt.modifiable = true
 vim.opt.encoding = "UTF-8"
 
 --Shell
-vim.o.shell = '/usr/bin/fish'
+
