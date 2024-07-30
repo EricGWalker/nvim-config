@@ -37,6 +37,7 @@ vim.opt.backspace = "indent,eol,start"
 vim.opt.splitright = true
 vim.opt.splitbelow = true
 vim.opt.autochdir = false
+vim.opt.autoread = true
 vim.opt.iskeyword:append("-")
 vim.opt.mouse:append('a')
 vim.opt.clipboard:append("unnamedplus")
