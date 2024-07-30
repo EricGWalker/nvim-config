@@ -22,10 +22,10 @@ vim.keymap.set("i", "<C-c>", "<Esc>", opts)
 
 -- Pane Navigation
 
-keymap.set("n", "<C-h>", "<C-w>h", opts) -- Navigate Left
-keymap.set("n", "<C-j>", "<C-w>j", opts) -- Navigate Down
-keymap.set("n", "<C-k>", "<C-w>k", opts) -- Navigate Up
-keymap.set("n", "<C-l>", "<C-w>l", opts) -- Navigate Right
+-- keymap.set("n", "<C-h>", "<C-w>h", opts) -- Navigate Left
+-- keymap.set("n", "<C-j>", "<C-w>j", opts) -- Navigate Down
+-- keymap.set("n", "<C-k>", "<C-w>k", opts) -- Navigate Up
+-- keymap.set("n", "<C-l>", "<C-w>l", opts) -- Navigate Right
 
 --Window Managment
 keymap.set("n", "<leader>sv", vim.cmd.vsplit, opts) -- Split Vertically

@@ -40,7 +40,9 @@ return {
             lspconfig.rust_analyzer.setup({})
             lspconfig.pyright.setup({})
             lspconfig.sqlls.setup({})
-            lspconfig.html.setup({})
+            lspconfig.html.setup({
+filetypes = {"html", "templ", "htmldjango"}
+            })
             lspconfig.cssls.setup({})
             lspconfig.clangd.setup({})
             lspconfig.bashls.setup({})
