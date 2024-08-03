@@ -41,7 +41,7 @@ return {
             lspconfig.pyright.setup({})
             lspconfig.sqlls.setup({})
             lspconfig.html.setup({
-filetypes = {"html", "templ", "htmldjango"}
+                filetypes = { "html", "templ", "htmldjango" }
             })
             lspconfig.cssls.setup({})
             lspconfig.clangd.setup({})
@@ -62,7 +62,7 @@ filetypes = {"html", "templ", "htmldjango"}
                 -- ... custom code ...
             end
             require("lspconfig").gopls.setup { on_attach = on_attach }
-        end
-    }
-}
+        end,
 
+    },
+}
