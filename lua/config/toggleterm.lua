@@ -1,5 +1,5 @@
 require("toggleterm").setup {
-    open_mapping    = {[[<c-\>]]}, -- or { [[<c-\>]], [[<c-¥>]] } if you also use a Japanese keyboard.
+    open_mapping    = {[[<c-\>]], [[<m-g>]]}, -- or { [[<c-\>]], [[<c-¥>]] } if you also use a Japanese keyboard.
     start_in_insert = true,
     direction       = 'float',
     hide_numbers    = true, -- hide the number column in toggleterm buffers
