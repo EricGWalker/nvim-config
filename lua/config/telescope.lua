@@ -17,18 +17,19 @@ local builtin = require('telescope.builtin')
 -- Recommended Keymaps from telescope GitHub
 
 --Keymap
-vim.keymap.set('n', '<leader>ff', builtin.find_files)
-vim.keymap.set('n', '<leader>fd', builtin.fd)
-vim.keymap.set('n', '<leader>fg', builtin.live_grep)
-vim.keymap.set('n', '<leader>fb', builtin.current_buffer_fuzzy_find)
-vim.keymap.set('n', '<leader>fu', builtin.buffers)
-vim.keymap.set('n', '<leader>fa', builtin.builtin)
-vim.keymap.set('n', '<leader>fk', builtin.keymaps)
-vim.keymap.set('n', '<leader>fh', builtin.help_tags)
+vim.keymap.set('n', '<leader>ff', builtin.find_files, {desc="telescope.builtin.find_files"})
+vim.keymap.set('n', '<leader>fd', builtin.fd, {desc="telescope.builtin.fd"})
+vim.keymap.set('n', '<leader>fg', builtin.live_grep, {desc="telescope.builtin.live_grep"})
+vim.keymap.set('n', '<leader>fb', builtin.current_buffer_fuzzy_find, {desc="telescope.builtin.current_buffer_fuzzy_find"})
+vim.keymap.set('n', '<leader>fu', builtin.buffers, {desc="telescope.builtin.buffers"})
+vim.keymap.set('n', '<leader>fa', builtin.builtin, {desc="telescope.builtin.builtin"})
+vim.keymap.set('n', '<leader>fk', builtin.keymaps, {desc="telescope.builtin.keymaps"})
+vim.keymap.set('n', '<leader>fh', builtin.help_tags, {desc="telescope.builtin.help_tags"})
+vim.keymap.set('n', 'grr', builtin.lsp_references, {desc="telescope.builtin.lsp_references"})
+vim.keymap.set('n', 'gd', builtin.lsp_definitions, {desc="telescope.builtin.lsp_definitions"})
+
+
 vim.keymap.set('n', '<leader>pv', function() telescope.extensions.file_browser.file_browser({initial_mode = 'normal', path='%:p:h'}) end) -- file browser
-
-
-
 -- vim.keymap.set('n', '<leader>fd', fb_extension.folder_browser, {}) -- folder directory
 -- above is broken... I will learn one day how to get it to work
 
