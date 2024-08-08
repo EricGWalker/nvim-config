@@ -30,7 +30,6 @@ vim.keymap.set("i", "<C-c>", "<Esc>", opts)
 --Window Managment
 keymap.set("n", "<leader>sv", vim.cmd.vsplit, opts)   -- Split Vertically
 keymap.set("n", "<leader>sh", vim.cmd.split, opts)    -- Split Horizontally
-keymap.set("n", "<leader>st", vim.cmd.terminal, opts) --Inserts terminal in current window
 
 --Terminal Navigation
 --This is probably a dangerous line

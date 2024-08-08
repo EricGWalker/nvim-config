@@ -1,5 +1,11 @@
 return {
-    'ThePrimeagen/harpoon',
+    "ThePrimeagen/harpoon",
+    branch = "harpoon2",
+    dependencies = { "nvim-lua/plenary.nvim" },
     lazy = false,
-    dependencies = {'nvim-lua/plenary.nvim'}
+    config = {
+        settings = {
+            sync_on_ui_close = false,
+        }
+    }
 }
