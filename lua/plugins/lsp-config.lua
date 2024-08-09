@@ -9,7 +9,7 @@ return {
         lazy = false,
         config = function()
             require('mason-lspconfig').setup({
-                ensure_installed = { 'lua_ls', 'rust_analyzer', 'pyright', 'sqlls', 'html', 'cssls', 'clangd', 'bashls', 'powershell_es', 'emmet_language_server', 'jinja_lsp' }
+                ensure_installed = { 'lua_ls', 'rust_analyzer', 'ruff_lsp', 'pyright', 'sqlls', 'html', 'cssls', 'clangd', 'bashls', 'powershell_es', 'emmet_language_server', 'jinja_lsp' }
             })
         end
     },
@@ -38,7 +38,6 @@ return {
             local lspconfig = require('lspconfig')
             lspconfig.lua_ls.setup({})
             lspconfig.rust_analyzer.setup({})
-            lspconfig.pyright.setup({})
             lspconfig.sqlls.setup({})
             lspconfig.html.setup({
                 filetypes = { "html", "templ", "htmldjango" }
@@ -49,6 +48,32 @@ return {
             lspconfig.powershell_es.setup({})
             lspconfig.emmet_language_server.setup({})
             lspconfig.jinja_lsp.setup({})
+
+            local on_attach = function(client, bufnr)
+                if client.name == 'ruff_lsp' then
+                    -- Disable hover in favor of Pyright
+                    client.server_capabilities.hoverProvider = false
+                end
+            end
+
+            require('lspconfig').ruff_lsp.setup {
+                on_attach = on_attach,
+            }
+
+            require('lspconfig').pyright.setup {
+                settings = {
+                    pyright = {
+                        -- Using Ruff's import organizer
+                        disableOrganizeImports = true,
+                    },
+                    python = {
+                        analysis = {
+                            -- Ignore all files for analysis to exclusively use Ruff for linting
+                            ignore = { '*' },
+                        },
+                    },
+                },
+            }
         end
     },
     {
