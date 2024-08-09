@@ -17,7 +17,7 @@ keymap.set("n", "gp", ":silent %! npx prettier --plugin=prettier-plugin-jinja-te
 --vim.keymap.set("n", "<leader>Y", [["+Y]])
 
 -- Pure Fucking Genius
-vim.keymap.set("i", "<C-c>", "<Esc>", opts)
+keymap.set("i", "<C-c>", "<Esc>", {desc = "Rebind C-c to Esc", noremap = true, silent = true })
 
 
 -- Pane Navigation

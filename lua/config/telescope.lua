@@ -25,7 +25,8 @@ vim.keymap.set('n', '<leader>fu', builtin.buffers, {desc="telescope.builtin.buff
 vim.keymap.set('n', '<leader>fa', builtin.builtin, {desc="telescope.builtin.builtin"})
 vim.keymap.set('n', '<leader>fk', builtin.keymaps, {desc="telescope.builtin.keymaps"})
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, {desc="telescope.builtin.help_tags"})
-vim.keymap.set('n', 'grr', builtin.lsp_references, {desc="telescope.builtin.lsp_references"})
+-- vim.keymap.set('n', 'grr', builtin.lsp_references, {desc="telescope.builtin.lsp_references"})
+vim.keymap.set('n', 'grr', function() builtin.lsp_references({initial_mode='normal'}) end, {desc="telescope.builtin.lsp_references"})
 vim.keymap.set('n', 'gd', builtin.lsp_definitions, {desc="telescope.builtin.lsp_definitions"})
 
 

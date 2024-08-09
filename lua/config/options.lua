@@ -44,5 +44,4 @@ vim.opt.clipboard:append("unnamedplus")
 vim.opt.modifiable = true
 vim.opt.encoding = "UTF-8"
 
---Shell
-
+-- Diagnostics
