@@ -17,20 +17,27 @@ local builtin = require('telescope.builtin')
 -- Recommended Keymaps from telescope GitHub
 
 --Keymap
-vim.keymap.set('n', '<leader>ff', builtin.find_files, {desc="telescope.builtin.find_files"})
-vim.keymap.set('n', '<leader>fd', builtin.fd, {desc="telescope.builtin.fd"})
-vim.keymap.set('n', '<leader>fg', builtin.live_grep, {desc="telescope.builtin.live_grep"})
-vim.keymap.set('n', '<leader>fb', builtin.current_buffer_fuzzy_find, {desc="telescope.builtin.current_buffer_fuzzy_find"})
-vim.keymap.set('n', '<leader>fu', builtin.buffers, {desc="telescope.builtin.buffers"})
-vim.keymap.set('n', '<leader>fa', builtin.builtin, {desc="telescope.builtin.builtin"})
-vim.keymap.set('n', '<leader>fk', builtin.keymaps, {desc="telescope.builtin.keymaps"})
-vim.keymap.set('n', '<leader>fh', builtin.help_tags, {desc="telescope.builtin.help_tags"})
+vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = "telescope.builtin.find_files" })
+vim.keymap.set('n', '<leader>fd', builtin.fd, { desc = "telescope.builtin.fd" })
+vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = "telescope.builtin.live_grep" })
+vim.keymap.set('n', '<leader>fb', builtin.current_buffer_fuzzy_find, {
+    desc =
+    "telescope.builtin.current_buffer_fuzzy_find"
+})
+vim.keymap.set('n', '<leader>fu', builtin.buffers, { desc = "telescope.builtin.buffers" })
+vim.keymap.set('n', '<leader>fa', builtin.builtin, { desc = "telescope.builtin.builtin" })
+vim.keymap.set('n', '<leader>fk', builtin.keymaps, { desc = "telescope.builtin.keymaps" })
+vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = "telescope.builtin.help_tags" })
 -- vim.keymap.set('n', 'grr', builtin.lsp_references, {desc="telescope.builtin.lsp_references"})
-vim.keymap.set('n', 'grr', function() builtin.lsp_references({initial_mode='normal'}) end, {desc="telescope.builtin.lsp_references"})
-vim.keymap.set('n', 'gd', builtin.lsp_definitions, {desc="telescope.builtin.lsp_definitions"})
+vim.keymap.set('n', 'grr', function() builtin.lsp_references({ initial_mode = 'normal' }) end,
+    { desc = "telescope.builtin.lsp_references" })
+vim.keymap.set('n', 'gd', builtin.lsp_definitions, { desc = "telescope.builtin.lsp_definitions" })
 
 
-vim.keymap.set('n', '<leader>pv', function() telescope.extensions.file_browser.file_browser({initial_mode = 'normal', path='%:p:h'}) end) -- file browser
+vim.keymap.set("n", "<leader>u", "<cmd>Telescope undo<cr>", { desc = "Undo History with Telescope" })
+
+vim.keymap.set('n', '<leader>pv',
+    function() telescope.extensions.file_browser.file_browser({ initial_mode = 'normal', path = '%:p:h' }) end) -- file browser
 -- vim.keymap.set('n', '<leader>fd', fb_extension.folder_browser, {}) -- folder directory
 -- above is broken... I will learn one day how to get it to work
 
@@ -70,34 +77,34 @@ telescope.setup {
     extensions = {
         file_browser = {
             hijack_netrw = true,
-
             mappings = {
-                ["i"] = {
-                    -- What I was trying to do above:
-                    -- vim.keymap.set('n', '<leader>fb', fb_picker.file_browser, {} ) -- file browser
-                    -- How it's supposed to work...
-                    -- ["<C-t>"] = fb_actions.toggle_browser -- This 
-                    -- your custom insert mode mappings
-                },
-                ["n"] = {
-                    -- your custom normal mode mappings
+                ["i"] = {},
+                ["n"] = { -- your custom normal mode mappings
                 },
             },
-
             initial_mode = 'normal'
+        },
+        {
+        },
+        fzf = {
+            fuzzy = true,                   -- false will only do exact matching
+            override_generic_sorter = true, -- override the generic sorter
+            override_file_sorter = true,    -- override the file sorter
+            case_mode = "smart_case",       -- or "ignore_case" or "respect_case"
+            -- the default case_mode is "smart_case"
+        },
+        undo = {
         },
         ["ui-select"] = {
             require("telescope.themes").get_dropdown {
-                -- even more opts
             }
         }
     }
 }
 
 
+telescope.load_extension("fzf")
 telescope.load_extension("file_browser")
 telescope.load_extension("ui-select")
-
-
--- local fb_picker = telescope.extensions.file_browser.picker
+telescope.load_extension("undo")
 
