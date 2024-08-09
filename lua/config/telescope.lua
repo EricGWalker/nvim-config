@@ -20,7 +20,7 @@ local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = "telescope.builtin.find_files" })
 vim.keymap.set('n', '<leader>fd', builtin.fd, { desc = "telescope.builtin.fd" })
 vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = "telescope.builtin.live_grep" })
-vim.keymap.set('n', '<leader>fb', builtin.current_buffer_fuzzy_find, {
+vim.keymap.set('n', '<leader>fi', builtin.current_buffer_fuzzy_find, {
     desc =
     "telescope.builtin.current_buffer_fuzzy_find"
 })
@@ -34,7 +34,7 @@ vim.keymap.set('n', 'grr', function() builtin.lsp_references({ initial_mode = 'n
 vim.keymap.set('n', 'gd', builtin.lsp_definitions, { desc = "telescope.builtin.lsp_definitions" })
 
 
-vim.keymap.set("n", "<leader>u", "<cmd>Telescope undo<cr>", { desc = "Undo History with Telescope" })
+vim.keymap.set("n", "<leader>u", "<cmd>Telescope undo initial_mode=normal<cr>", { desc = "Undo History with Telescope" })
 
 vim.keymap.set('n', '<leader>pv',
     function() telescope.extensions.file_browser.file_browser({ initial_mode = 'normal', path = '%:p:h' }) end) -- file browser
