@@ -1,6 +1,6 @@
 return {
     "neovim/nvim-lspconfig", -- REQUIRED: for native Neovim LSP integration
-    lazy = false,          -- REQUIRED: tell lazy.nvim to start this plugin at startup
+    lazy = false,            -- REQUIRED: tell lazy.nvim to start this plugin at startup
 
     dependencies = {
         -- main one
@@ -24,11 +24,10 @@ return {
         vim.g.coq_settings = {
             auto_start = true, -- if you want to start COQ at startup
             -- Your COQ settings here
-            keymap = { recommended = false }
+            keymap = { recommended = false, eval_snips = "<leader>j" },
         }
-    end,
-    config = function()
-        -- Keybindings
+
+
         vim.api.nvim_set_keymap('i', '<Esc>', [[pumvisible() ? "\<C-e><Esc>" : "\<Esc>"]], { expr = true, silent = true })
         -- This ruined my remap
         -- vim.api.nvim_set_keymap('i', '<C-c>', [[pumvisible() ? "\<C-e><C-c>" : "\<C-c>"]], { expr = true, silent = true })
@@ -41,5 +40,8 @@ return {
         )
         vim.api.nvim_set_keymap('i', '<Tab>', [[pumvisible() ? "\<C-n>" : "\<Tab>"]], { expr = true, silent = true })
         vim.api.nvim_set_keymap('i', '<S-Tab>', [[pumvisible() ? "\<C-p>" : "\<BS>"]], { expr = true, silent = true })
+    end,
+    config = function()
+        -- Keybindings
     end,
 }
