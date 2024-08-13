@@ -1,6 +1,10 @@
 local keymap = vim.keymap
 local opts = { noremap = true, silent = true }
 
+
+
+
+vim.g.ftplugin_sql_omni_key = '<C-m>'
 keymap.set("n", "gp", ":silent %! npx prettier --plugin=prettier-plugin-jinja-template  --parser=jinja-template --write % <CR>")
 --
 --Directory Navigation

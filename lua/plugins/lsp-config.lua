@@ -9,7 +9,7 @@ return {
         lazy = false,
         config = function()
             require('mason-lspconfig').setup({
-                ensure_installed = { 'lua_ls', 'rust_analyzer', 'ruff_lsp', 'pyright', 'sqlls', 'html', 'cssls', 'clangd', 'bashls', 'powershell_es', 'emmet_language_server', 'jinja_lsp' }
+                ensure_installed = { 'lua_ls', 'rust_analyzer', 'ruff_lsp', 'pyright', 'sqls', 'html', 'cssls', 'clangd', 'bashls', 'powershell_es', 'emmet_language_server', 'jinja_lsp' }
             })
         end
     },
@@ -38,7 +38,21 @@ return {
             local lspconfig = require('lspconfig')
             lspconfig.lua_ls.setup({})
             lspconfig.rust_analyzer.setup({})
-            lspconfig.sqlls.setup({})
+            lspconfig.sqls.setup({
+                -- on_attach = function(client, bufnr)
+                --     require('sqls').on_attach(client, bufnr) -- require sqls.nvim
+                -- end,
+                -- settings = {
+                --     sqls = {
+                --         connections = {
+                --             {
+                --                 alias= "mariadb_alias",
+                --                 driver = 'mysql',
+                --             },
+                --         },
+                --     },
+                -- },
+            })
             lspconfig.html.setup({
                 filetypes = { "html", "templ", "htmldjango" }
             })
@@ -63,15 +77,18 @@ return {
             require('lspconfig').pyright.setup {
                 settings = {
                     pyright = {
-                        -- Using Ruff's import organizer
-                        disableOrganizeImports = true,
+                        disableOrganizeImports = true, -- Using Ruff
                     },
                     python = {
                         analysis = {
-                            -- Ignore all files for analysis to exclusively use Ruff for linting
-                            ignore = { '*' },
+                            ignore = { '*' }, -- Using Ruff
                         },
                     },
+                    capabilities = (function()
+                        local capabilities = vim.lsp.protocol.make_client_capabilities()
+                        capabilities.textDocument.publishDiagnostics.tagSupport.valueSet = { 2 }
+                        return capabilities
+                    end)(),
                 },
             }
         end
