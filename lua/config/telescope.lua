@@ -22,7 +22,7 @@ vim.keymap.set('n', '<leader>fd', builtin.fd, { desc = "telescope.builtin.fd" })
 vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = "telescope.builtin.live_grep" })
 vim.keymap.set('n', '<leader>fi', builtin.current_buffer_fuzzy_find, {
     desc =
-    "telescope.builtin.current_buffer_fuzzy_find"
+    "telescope.builtin.current_buffer_fuzzy_find (tags: grep)"
 })
 vim.keymap.set('n', '<leader>fu', builtin.buffers, { desc = "telescope.builtin.buffers" })
 vim.keymap.set('n', '<leader>fa', builtin.builtin, { desc = "telescope.builtin.builtin" })
