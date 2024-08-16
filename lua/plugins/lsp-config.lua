@@ -38,12 +38,12 @@ return {
             local lspconfig = require('lspconfig')
             lspconfig.lua_ls.setup({})
             lspconfig.rust_analyzer.setup({})
-            lspconfig.sqls.setup({
-                on_attach = function(client, bufnr)
-                    require('sqls').on_attach(client, bufnr) -- require sqls.nvim
-                end,
-                cmd = {"sqls", "-config", "/home/eric/.config/sqls/config.yml"}
-                -- settings = {
+            -- lspconfig.sqls.setup({
+                -- on_attach = function(client, bufnr)
+                --     require('sqls').on_attach(client, bufnr) -- require sqls.nvim
+                -- end,
+                -- cmd = {"sqls", "-config", "/home/eric/.config/sqls/config.yml"}
+                -- -- settings = {
                 --     sqls = {
                 --         connections = {
                 --             {
@@ -53,7 +53,7 @@ return {
                 --         },
                 --     },
                 -- },
-            })
+            -- })
             lspconfig.html.setup({
                 filetypes = { "html", "templ", "htmldjango" }
             })
